@@ -72,7 +72,7 @@ const TopNav = (props)  => {
             <Divider sx={{mb: 2}} />
             <Box sx={{mb: 2}}>
               <ListItemButton>
-                <Link to='/albums'>
+                <Link to='/albums' onClick={toggleDrawer(false)} >
                   <ListItemIcon>
                     <AlbumIcon sx={{color: "primary.main"}} />
                   </ListItemIcon>
@@ -81,7 +81,7 @@ const TopNav = (props)  => {
               </ListItemButton>
 
               <ListItemButton>
-                <Link to='/artists'>
+                <Link to='/artists' onClick={toggleDrawer(false)} >
                   <ListItemIcon>
                     <PersonIcon sx={{color: "primary.main"}}/>
                   </ListItemIcon >
@@ -90,7 +90,7 @@ const TopNav = (props)  => {
               </ListItemButton>
 
               <ListItemButton>
-                <Link to="/home">
+                <Link to="/home" onClick={toggleDrawer(false)} >
                   <ListItemIcon>
                     <HomeIcon sx={{color: "primary.main"}} />
                   </ListItemIcon>
@@ -106,10 +106,10 @@ const TopNav = (props)  => {
               left: "50%",
               transform: "translate(-50%, 0)"}}
             >
-              <Button variant="outlined" sx={{m:1, width: 1}}>
+              {/* <Button variant="outlined" sx={{m:1, width: 1}}>
               <LoginButton />
               <LogoutButton />
-              </Button>
+              </Button> */}
             </Box>
           </Box>
         </Drawer>
