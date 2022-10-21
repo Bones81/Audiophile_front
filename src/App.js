@@ -61,7 +61,7 @@ const App = () => {
          .then(
            (response) => setAlbums(response.data),
            // console.log(response.data)
-           (err) => console.err(err)
+           (err) => console.error(err)
     )
     .catch((error) => console.error(error))
   }
@@ -74,7 +74,7 @@ const App = () => {
   }
 
   const handleDelete = (deletedAlbum) => {
-    axios.delete(albumAPIURL + deletedAlbum.id)
+    axios.delete(albumAPIURL + `/${deletedAlbum.id}`)
          .then((response) => {
            setAlbums(
              albums.filter((album) => album.id !== deletedAlbum.id )
@@ -83,7 +83,7 @@ const App = () => {
   }
 
   const handleUpdate = (album2Update) => {
-    axios.put(albumAPIURL + album2Update.id, album2Update)
+    axios.put(albumAPIURL + `/${album2Update.id}`, album2Update)
          .then( (response) => {
            setAlbums(
              albums.map((album) => {
@@ -167,7 +167,7 @@ const App = () => {
   }
 
   const handleDeleteArtist = (deletedArtist) => {
-    axios.delete(artistsAPIURL + deletedArtist.id)
+    axios.delete(artistsAPIURL + `/${deletedArtist.id}`)
          .then((response) => {
            setArtists(
              artists.filter((artist) => artist.id !== deletedArtist.id )
@@ -176,7 +176,7 @@ const App = () => {
   }
 
   const handleUpdateArtist = (editArtist) => {
-    axios.put(artistsAPIURL + editArtist.id, editArtist)
+    axios.put(artistsAPIURL + `/${editArtist.id}`, editArtist)
     .then((response) => {
       setArtists(
         artists.map((artist) => {
@@ -201,7 +201,7 @@ const artistsMap = artists.map((artist) => {
             <EditArtist handleUpdateArtist= {handleUpdateArtist} artist={artist}/>
             <DeleteIcon aria-label="delete" onClick={() => {handleDeleteArtist(artist)}} color="error" sx={{color: "#ec407a"}}/>
           </>
-          // }
+          {/* } */}
         </Grid>
       </div>
     )
