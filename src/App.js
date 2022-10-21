@@ -49,9 +49,15 @@ const App = () => {
   //CAROUSEL STATE
   const [imageIndex, setImageIndex] = useState(0)
 
+  const localhostURL = 'http://localhost:8000'
+  const herokuURL = 'https://young-savannah-30515.herokuapp.com/'
+  const renderURL = 'https://audiophile-back.onrender.com/'
+  
+
 /////// ALBUM CRUD \\\\\\\
+  const albumAPIURL = herokuURL + 'api/albums/'
   const getAlbums = () => {
-    axios.get('https://young-savannah-30515.herokuapp.com/api/albums')
+    axios.get(albumAPIURL)
          .then(
            (response) => setAlbums(response.data),
            // console.log(response.data)
@@ -61,14 +67,14 @@ const App = () => {
   }
 
   const handleCreate = (newAlbum) => {
-    axios.post('https://young-savannah-30515.herokuapp.com/api/albums', newAlbum)
+    axios.post(albumAPIURL, newAlbum)
          .then(
            setAlbums([...albums, newAlbum])
          )
   }
 
   const handleDelete = (deletedAlbum) => {
-    axios.delete('https://young-savannah-30515.herokuapp.com/api/albums/' + deletedAlbum.id)
+    axios.delete(albumAPIURL + deletedAlbum.id)
          .then((response) => {
            setAlbums(
              albums.filter((album) => album.id !== deletedAlbum.id )
@@ -77,7 +83,7 @@ const App = () => {
   }
 
   const handleUpdate = (album2Update) => {
-    axios.put('https://young-savannah-30515.herokuapp.com/api/albums/' + album2Update.id, album2Update)
+    axios.put(albumAPIURL + album2Update.id, album2Update)
          .then( (response) => {
            setAlbums(
              albums.map((album) => {
@@ -141,9 +147,10 @@ const App = () => {
   }
 
 ///////////////////// ARTIST CRUD ///////////////////
+  const artistsAPIURL = herokuURL + '/api/artists/'
   const getArtists = () => {
     axios
-    .get('https://young-savannah-30515.herokuapp.com/api/artists')
+    .get(artistsAPIURL)
        .then(
          (response) => setArtists(response.data),
          (err) => console.err(err)
@@ -153,14 +160,14 @@ const App = () => {
 
   const handleCreateArtist = (newArtist) => {
     axios
-    .post('https://young-savannah-30515.herokuapp.com/api/artists', newArtist)
+    .post(artistsAPIURL, newArtist)
         .then(
          setArtists([...artists, newArtist])
        )
   }
 
   const handleDeleteArtist = (deletedArtist) => {
-    axios.delete('https://young-savannah-30515.herokuapp.com/api/artists/' + deletedArtist.id)
+    axios.delete(artistsAPIURL + deletedArtist.id)
          .then((response) => {
            setArtists(
              artists.filter((artist) => artist.id !== deletedArtist.id )
@@ -169,7 +176,7 @@ const App = () => {
   }
 
   const handleUpdateArtist = (editArtist) => {
-    axios.put('https://young-savannah-30515.herokuapp.com/api/artists/' + editArtist.id, editArtist)
+    axios.put(artistsAPIURL + editArtist.id, editArtist)
     .then((response) => {
       setArtists(
         artists.map((artist) => {

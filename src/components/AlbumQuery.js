@@ -49,7 +49,7 @@ const AlbumQuery = (props) => {
     e.preventDefault()
     // https://jasonwatmore.com/post/2020/02/01/react-fetch-http-post-request-examples
     // helped us figure out how to execute this particular post request
-    fetch('https://young-savannah-30515.herokuapp.com/api/albums/spotify_album', {
+    fetch('https://audiophile-back.onrender.com/api/albums/spotify_album', {
       credentials: 'include',
       method: 'POST',
       mode: 'cors',
