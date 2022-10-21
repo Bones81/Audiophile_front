@@ -28,7 +28,7 @@ Live Link: <https://Bones81.github.io/Audiophile_front/>
 
 Likely will need to rebuild user auth from scratch, as old Auth0 client_id and data no longer available without disrupting old dev partners who are probably not interested in preserving this app.
 
-React Router also causing issues with deploying to Github Pages. 
+React Router also causing issues with deploying to Github Pages.
 
 ## User Stories
 
