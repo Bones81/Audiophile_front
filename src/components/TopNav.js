@@ -71,7 +71,7 @@ const TopNav = (props)  => {
             </IconButton>
             <Divider sx={{mb: 2}} />
             <Box sx={{mb: 2}}>
-              <ListItemButton onClick={()=>{window.location.href="https://localhost:3000/Audiophile_front/albums"}}>
+              <ListItemButton onClick={()=>{window.location.href="https://Bones81.github.io/Audiophile_front/albums"}}>
                 <ListItemIcon>
                   <AlbumIcon sx={{color: "primary.main"}} />
                 </ListItemIcon>
