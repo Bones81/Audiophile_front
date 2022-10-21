@@ -2,6 +2,7 @@
   "name": "p4_front",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://Bones81.github.io/Audiophile_front",
   "dependencies": {
     "@auth0/auth0-react": "^1.9.0",
     "@emotion/react": "^11.8.2",
@@ -22,6 +23,8 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -44,5 +47,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^4.0.0"
   }
 }
