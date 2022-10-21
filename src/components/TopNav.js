@@ -22,7 +22,7 @@ import ListItemText from "@mui/material/ListItemText";
 import AlbumIcon from '@mui/icons-material/Album';
 import PersonIcon from '@mui/icons-material/Person';
 import HomeIcon from '@mui/icons-material/Home';
-
+import { Link } from 'react-router-dom';
 
 const TopNav = (props)  => {
   const [open, setState] = useState(false);
@@ -71,25 +71,31 @@ const TopNav = (props)  => {
             </IconButton>
             <Divider sx={{mb: 2}} />
             <Box sx={{mb: 2}}>
-              <ListItemButton onClick={()=>{window.location.href="https://Bones81.github.io/Audiophile_front/albums"}}>
-                <ListItemIcon>
-                  <AlbumIcon sx={{color: "primary.main"}} />
-                </ListItemIcon>
-                <ListItemText primary="Albums" />
+              <ListItemButton>
+                <Link to='/albums'>
+                  <ListItemIcon>
+                    <AlbumIcon sx={{color: "primary.main"}} />
+                  </ListItemIcon>
+                  <ListItemText primary="Albums" />
+                </Link>
               </ListItemButton>
 
-              <ListItemButton onClick={()=>{window.location.href="https://Bones81.github.io/Audiophile_front/artists"}}>
-                <ListItemIcon>
-                  <PersonIcon sx={{color: "primary.main"}}/>
-                </ListItemIcon >
-                <ListItemText primary="Artists" />
+              <ListItemButton>
+                <Link to='/artists'>
+                  <ListItemIcon>
+                    <PersonIcon sx={{color: "primary.main"}}/>
+                  </ListItemIcon >
+                  <ListItemText primary="Artists" />
+                </Link>
               </ListItemButton>
 
-              <ListItemButton onClick={()=>{window.location.href="https://Bones81.github.io/Audiophile_front/home"}}>
-                <ListItemIcon>
-                  <HomeIcon sx={{color: "primary.main"}} />
-                </ListItemIcon>
-                <ListItemText primary="Home Page" />
+              <ListItemButton>
+                <Link to="/home">
+                  <ListItemIcon>
+                    <HomeIcon sx={{color: "primary.main"}} />
+                  </ListItemIcon>
+                  <ListItemText primary="Home Page" />
+                </Link>
               </ListItemButton>
             </Box>
             <Box sx={{
