@@ -1,8 +1,8 @@
 # Audiophile
 
-This is the front end repo for Audiophile, created in collaboration with Nathan Freeman (https://github.com/Bones81) and Vanessa Nieto-Thrower (https://github.com/nietovaca)
+This is the front end repo for Audiophile, created in collaboration with Nathan Freeman (<https://github.com/Bones81>) and Vanessa Nieto-Thrower (<https://github.com/nietovaca>)
 
-Live Link: https://Bones81.github.io/Audiophile_front/
+Live Link: <https://Bones81.github.io/Audiophile_front/>
 
 ## Technologies Used
 
@@ -28,7 +28,7 @@ Live Link: https://Bones81.github.io/Audiophile_front/
 
 ## User Stories
 
-*As a general user, one can visit our site to get music recs based on genre, artist or year
-*As an authenticated user, one can edit, delete or add new music recs to the music lists.
+* As a general user, one can visit our site to get music recs based on genre, artist or year
+* As an authenticated user, one can edit, delete or add new music recs to the music lists.
 
 ## Notes to the Developers
