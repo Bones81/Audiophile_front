@@ -153,7 +153,7 @@ const App = () => {
     .get(artistsAPIURL)
        .then(
          (response) => setArtists(response.data),
-         (err) => console.err(err)
+         (err) => console.error(err)
     )
     .catch((error) => console.error(error))
   }
